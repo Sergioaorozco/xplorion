@@ -12,8 +12,8 @@ const toggleModal = () => {
 </script>
 
 <template>
+  <MissionModal @close-modal="toggleModal" v-if="showModal" />
   <Map>
     <Bird :x-position="1500" :y-position="1100" taxonomy="bird" @check-item="toggleModal" />
-    <MissionModal v-if="showModal" />
   </Map>
 </template>

@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import { defineProps, defineEmits } from 'vue';
 const emit = defineEmits(['check-item']);
-defineProps({
+const props = defineProps({
   xPosition: {
     type: Number,
     required: true
@@ -17,7 +16,7 @@ defineProps({
 })
 
 const testAnimal = () => {
-  emit('check-item', { taxonomy });
+  emit('check-item', { taxonomy: props.taxonomy });
 }
 </script>
 

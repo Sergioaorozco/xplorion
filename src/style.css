@@ -5,27 +5,39 @@
 body {
   user-select: none;
 }
-
+/* Map Styles */
 .w-container {
-  width: 100vw;
   height: 100vh;
-  position: relative;
   overflow: hidden;
+  position: relative;
+  width: 100vw;
   .map {
-    user-select: none;
-    touch-action: none;
-    position: absolute;
     cursor: grab;
-    top: 0;
-    left: 0;
     height: 170vw;
+    left: 0;
+    position: absolute;
+    top: 0;
+    touch-action: none;
+    user-select: none;
     width: 300vw;
     .map_image {
-      position: absolute;
-      top: 0;
       bottom: 0;
       left: 0;
+      position: absolute;
       right: 0;
+      top: 0;
     }
+  }
+}
+
+
+/* Modal Styles  */
+.modal-container { 
+  @apply fixed top-0 left-0;
+  .modal-content {
+    @apply flex justify-center items-center z-50 relative h-full w-full;
+  }
+  .modal-overlay{
+    @apply absolute top-0 left-0 w-full h-full bg-black bg-opacity-50;
   }
 }
