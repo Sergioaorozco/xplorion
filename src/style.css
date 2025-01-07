@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  user-select: none;
+}
+
+.w-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  .map {
+    user-select: none;
+    touch-action: none;
+    position: absolute;
+    cursor: grab;
+    top: 0;
+    left: 0;
+    height: 170vw;
+    width: 300vw;
+    .map_image {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+}
