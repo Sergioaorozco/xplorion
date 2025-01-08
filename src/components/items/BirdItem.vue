@@ -27,12 +27,12 @@ const testAnimal = () => {
     :style = "{ top: yPosition + 'px', left: xPosition + 'px' }"
   >
     <figure class="map-item">
-      <img class="" src="/src/images/animal.svg" alt="bird item in the map" />
+      <img class="" src="/src/assets/images/animal.svg" alt="bird item in the map" />
     </figure>
   </article>
 </template>
 
 
 <style scoped>
-.map-item:hover { cursor: url('/src/images/watch.png'), auto; }
+.map-item:hover { cursor: url('/src/assets/images/cursors/watch.png'), auto; }
 </style>

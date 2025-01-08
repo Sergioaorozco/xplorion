@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'BatonGreekBold';
+  src: url("src/assets/fonts/BatonGreekBeta-Bold.otf");
+}
+
+@font-face {
+  font-family: 'Basis_Grotesque';
+  src: url("src/assets/fonts/basis-grotesque-medium-pro.woff2");
+}
+
 body {
   user-select: none;
 }
@@ -35,6 +45,7 @@ body {
 .modal-container { 
   @apply fixed top-0 left-0;
   .modal-content {
+    font-family: "BatonGreekBold", sans-serif;
     @apply flex justify-center items-center z-50 relative h-full w-full;
   }
   .modal-overlay{
