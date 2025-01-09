@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const emit = defineEmits(['check-item']);
+
 const props = defineProps({
   xPosition: {
     type: Number,
@@ -16,7 +17,12 @@ const props = defineProps({
 })
 
 const testAnimal = () => {
-  emit('check-item', { taxonomy: props.taxonomy });
+  emit('check-item', {
+    taxonomy: props.taxonomy,
+    title: 'The cave of Kokkalis',
+    WKey: 'You have discovered an Attraction',
+    description: 'During the Second World War, the republican army built a cave in Mount Vrontero to make it a hospital for the wounded. It got it’s name from doctor Petros Kokkalis.',
+  });
 }
 </script>
 

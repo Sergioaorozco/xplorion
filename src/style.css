@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom Styles */
 @font-face {
   font-family: 'BatonGreekBold';
   src: url("src/assets/fonts/BatonGreekBeta-Bold.otf");
@@ -12,9 +13,9 @@
   src: url("src/assets/fonts/basis-grotesque-medium-pro.woff2");
 }
 
-body {
-  user-select: none;
-}
+.title-fontface { font-family: "BatonGreekBold", sans-serif; }
+.content-fontface { font-family: "Basis_Grotesque", sans-serif; }
+
 /* Map Styles */
 .w-container {
   height: 100vh;
@@ -41,6 +42,7 @@ body {
 }
 
 
+
 /* Modal Styles  */
 .modal-container { 
   @apply fixed top-0 left-0;
@@ -50,5 +52,14 @@ body {
   }
   .modal-overlay{
     @apply absolute top-0 left-0 w-full h-full bg-black bg-opacity-50;
+  }
+}
+
+/* Home Styles */
+
+.start-button {
+  @apply bg-blue-700 px-5 py-2 rounded-lg text-white font-bold text-3xl transition-colors duration-300;
+  &:hover {
+    @apply bg-blue-900;
   }
 }
