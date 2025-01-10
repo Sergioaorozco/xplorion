@@ -15,6 +15,7 @@
 
 .title-fontface { font-family: "BatonGreekBold", sans-serif; }
 .content-fontface { font-family: "Basis_Grotesque", sans-serif; }
+.custom-pointer:hover { cursor: url("src/assets/images/cursors/pointer.png");}
 
 /* Map Styles */
 .w-container {
