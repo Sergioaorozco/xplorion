@@ -1,7 +1,8 @@
 <template>
   <MissionListModal v-if="showItemListModal" @close-modal="showItemListModal = false">
     <template v-slot:itemList >
-      <p>Testing</p>
+      <h2 class="text-5xl text-center">List of Items</h2>
+      <p>{{  countItems }}</p>
     </template>
   </MissionListModal>
   <section>
@@ -29,7 +30,14 @@ import MissionListModal from '../components/MissionModal.vue';
 const gameStore = useGameStore();
 
 // Reactive References
-let isCompleted = computed(() => gameStore.completionNotification);
 let showItemListModal = ref(false);
+
+// Computed Properties
+let isCompleted = computed(() => gameStore.completionNotification);
+let countItems = computed(() => {
+  const foundItems = gameStore.userFindObjects.filter((item) => item.found);
+  return `${foundItems.length} / ${gameStore.userFindObjects.length}`;
+});
+
 
 </script>

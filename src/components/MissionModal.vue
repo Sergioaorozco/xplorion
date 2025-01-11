@@ -12,15 +12,6 @@
   
 </template>
 
-<script setup lang="ts">
-
-const props = defineProps({
-  title: String,
-  WKey: String,
-  description: String,
-})
-
-</script>
 
 <style scoped>
 @import '../animations.css';
