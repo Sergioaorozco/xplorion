@@ -4,7 +4,7 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, onUnmounted } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 import MobileScreen from './components/MobileScreen.vue';
 let isMobile = ref(window.innerWidth < 768);
 

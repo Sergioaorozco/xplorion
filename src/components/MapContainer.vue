@@ -5,22 +5,24 @@
     :description="ModalContent.description"
     @close-modal="closeModal"
     v-if="showModal" 
-  />
-  <!-- Menu Section -->
-  <section>
-  <article class="absolute top-2 flex justify-between items-center w-full z-30 px-6">
-    <p class="title-fontface text-4xl custom-pointer">Kapuf</p>
-    <ul class="flex items-center gap-x-5">
-      <li :class="['size-24 border-white border-8 flex justify-center items-center',gameStore.completionNotification ? 'bg-lime-500' : 'bg-stone-300']">Objects</li>
-      <li :class="['size-24 border-white border-8 bg-stone-300']"></li>
-      <li :class="['size-24 border-white border-8 bg-stone-300']"></li>
-    </ul>
-    <div class="flex gap-x-5">
-      <button class="title-fontface text-4xl custom-pointer">Credits</button>
-      <button class="title-fontface text-4xl custom-pointer">Help</button>
+  >
+  <template #itemFound>
+    <div class="flex gap-x-2 justify-between">
+      <span class="w-2/5">
+        <h1 v-if="ModalContent.WKey" class="text-lg font-bold text-lime-700 tracking-wide uppercase">{{ ModalContent.WKey }}</h1>
+        <h2 class="text-5xl my-4">{{ModalContent.title}}</h2>
+        <p class="text-pretty basis-text"> {{ ModalContent.description }}</p>
+        <button class="mt-9">See the List</button>
+      </span>
+      <figure class="relative w-[400px] h-[300px]">
+        <img class="absolute" src="../assets/images/card-back.svg" alt="">
+        <img class="absolute" src="../assets/images/cave-of-kokkalis.webp" alt="">
+      </figure>
     </div>
-  </article>
-</section>
+  </template>
+  </MissionModal>
+  <!-- Menu Section -->
+  <MenuSection />
   <!-- Map Illustration -->
   <Map>
     <Bird :x-position="1500" :y-position="1100" id="item003" type="item" @check-item="openModalContent" />
@@ -39,6 +41,7 @@
   import Bird from '../components/items/BirdItem.vue';
   import Place from '../components/items/PlaceItem.vue';
   import MissionModal from '../components/MissionModal.vue';
+  import MenuSection from '../components/MenuSection.vue';
   const gameStore = useGameStore();
 
   // Rective References

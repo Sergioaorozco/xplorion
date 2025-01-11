@@ -3,18 +3,8 @@
     <article class="modal-content">
       <figure class="px-20 py-14 modal-bg relative aspect-video size w-[900px] h-[500px]">
         <button class="modal-close-button absolute top-6 right-10" @click="$emit('close-modal')">Cerrar</button>
-        <div class="flex gap-x-2 justify-between">
-          <span class="w-2/5">
-            <h1 class="text-lg font-bold text-lime-700 tracking-wide uppercase">{{ props.WKey }}</h1>
-            <h2 class="text-5xl my-4">{{props.title}}</h2>
-            <p class="text-pretty basis-text"> {{ props.description }}</p>
-            <button class="mt-9">See the List</button>
-          </span>
-          <figure class="relative w-[400px] h-[300px]">
-            <img class="absolute" src="../assets/images/card-back.svg" alt="">
-            <img class="absolute" src="../assets/images/cave-of-kokkalis.webp" alt="">
-          </figure>
-        </div>
+        <slot name="itemFound"></slot>
+        <slot name="itemList"></slot>
       </figure>
     </article>
     <div class="modal-overlay"></div>
@@ -33,7 +23,7 @@ const props = defineProps({
 </script>
 
 <style scoped>
-@import 'src/animations.css';
+@import '../animations.css';
 
 .modal-container {
   cursor: url('../assets/images/cursors/default.png'), auto;
