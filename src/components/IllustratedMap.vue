@@ -5,7 +5,7 @@
       @mousedown="startPosition"
       :style="{ transform: `translate3d(${translateX}px, ${translateY}px, 0px)` }"
     >
-      <img class="map_image min-w-full min-h-full" src="/src/assets/images/scenery-BG.webp" alt="" />
+      <img class="map_image min-w-full min-h-full" src="/images/scenery-BG.webp" alt="" />
       <slot></slot>
   </div>
 </article>
@@ -65,10 +65,10 @@ onMounted(() => {
 
 <style scoped>
 .map {
-  cursor: url(/src/assets/images/cursors/hand.png), auto;
+  cursor: url(/images/items/cursors/hand.png), auto;
 }
 .map:active {
-  cursor: url(/src/assets/images/cursors/drag.png), auto;
+  cursor: url(/images/items/cursors/drag.png), auto;
 
 }
 </style>

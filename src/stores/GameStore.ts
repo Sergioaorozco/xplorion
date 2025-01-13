@@ -3,10 +3,10 @@ import { ref, computed } from "vue";
 
 export const useGameStore = defineStore('gameAdvance', () => {
   const userFindObjects = ref([
-    {name:'bird', img:'./src/assets/images/Bird.svg',id:'bird_item', found: false, type:'item'},
-    {name:'mono', img:'./src/assets/images/Mono.svg',id:'mono_item', found: false, type:'item'},
-    {name:'frog', img:'./src/assets/images/Frog.svg',id:'frog_item', found: false, type:'item'},
-    {name:'lion', img:'./src/assets/images/Lion.svg',id:'lion_item', found: false, type:'item'},
+    {name:'bird', img:'/images/items/Bird.svg',id:'bird_item', found: false, type:'item'},
+    {name:'mono', img:'images/items/Mono.svg',id:'mono_item', found: false, type:'item'},
+    {name:'frog', img:'/images/items/Frog.svg',id:'frog_item', found: false, type:'item'},
+    {name:'lion', img:'/images/items/Lion.svg',id:'lion_item', found: false, type:'item'},
   ])
 
   const completionNotification = computed(() => {

@@ -14,8 +14,8 @@
         <p class="text-pretty basis-text"> {{ ModalContent.description }}</p>
       </span>
       <figure class="relative w-3/5 flex justify-center items-center h-full">
-        <img class="absolute" width="400" src="../assets/images/card-back.svg" alt="">
-        <img class="absolute" width="400" src="../assets/images/cave-of-kokkalis.webp" alt="">
+        <img class="absolute" width="400" src="/images/card-back.svg" alt="">
+        <img class="absolute" width="400" src="/images/cave-of-kokkalis.webp" alt="">
       </figure>
     </div>
   </template>

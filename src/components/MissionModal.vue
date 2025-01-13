@@ -18,11 +18,11 @@
 @import '../animations.css';
 
 .modal-container {
-  cursor: url('../assets/images/cursors/default.png'), auto;
+  cursor: url('/images/cursors/default.png'), auto;
 }
-.modal-close-button:hover { cursor: url('../assets/images/cursors/pointer.png'), auto; }
+.modal-close-button:hover { cursor: url('/images/cursors/pointer.png'), auto; }
 .modal-bg {
-  background-image: url('../assets/images/modal-bg-small-front.png');
+  background-image: url('/images/modal-bg-small-front.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
