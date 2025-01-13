@@ -16,15 +16,15 @@
   </MissionListModal>
   <section>
     <article class="absolute top-2 flex justify-between items-center w-full z-30 px-6">
-      <p class="title-fontface text-4xl custom-pointer">Xplorion</p>
+      <p class="title-fontface text-4xl custom-hover-pointer">Xplorion</p>
       <ul class="flex items-center gap-x-5">
         <li @click="trackingListModal" :class="['size-24 border-white border-8 flex justify-center items-center', isCompleted ? 'bg-lime-500' : 'bg-stone-300']"></li>
         <!-- <li :class="['size-24 border-white border-8 bg-stone-300']"></li>
         <li :class="['size-24 border-white border-8 bg-stone-300']"></li> -->
       </ul>
       <div class="flex gap-x-5">
-        <button class="title-fontface text-4xl custom-pointer">Credits</button>
-        <button class="title-fontface text-4xl custom-pointer">Help</button>
+        <button class="title-fontface text-4xl custom-hover-pointer">Credits</button>
+        <button class="title-fontface text-4xl custom-hover-pointer">Help</button>
       </div>
     </article>
   </section>
