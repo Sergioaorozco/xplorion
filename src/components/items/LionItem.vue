@@ -23,10 +23,10 @@ const props = defineProps({
 const testAnimal = () => {
   emit('check-item', {
     type: props.type,
-    title: 'The cave of Kokkalis',
+    title: 'FireBird of Utah',
     id: props.id,
-    WKey: 'You have discovered an Attraction',
-    description: 'During the Second World War, the republican army built a cave in Mount Vrontero to make it a hospital for the wounded. It got it’s name from doctor Petros Kokkalis.',
+    WKey: 'You have discovered a Bird',
+    description: "During the Second World War, the republican army built a cave in Mount Vrontero to make it a hospital for the wounded. It got it's name from doctor Petros Kokkalis.",
   });
 }
 </script>
@@ -38,7 +38,7 @@ const testAnimal = () => {
     :style = "{ top: yPosition + 'px', left: xPosition + 'px' }"
   >
     <figure class="map-item">
-      <img class="" src="/src/assets/images/Bird.svg" alt="bird item in the map" />
+      <img class="" src="/src/assets/images/Lion.svg" alt="Lion item in the map" />
     </figure>
   </article>
 </template>

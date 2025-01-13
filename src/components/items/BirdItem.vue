@@ -38,7 +38,7 @@ const testAnimal = () => {
     :style = "{ top: yPosition + 'px', left: xPosition + 'px' }"
   >
     <figure class="map-item">
-      <img class="" src="/src/assets/images/animal.svg" alt="bird item in the map" />
+      <img class="" src="/src/assets/images/Bird.svg" alt="bird item in the map" />
     </figure>
   </article>
 </template>

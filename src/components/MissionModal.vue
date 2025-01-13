@@ -1,10 +1,11 @@
 <template>
   <section class="modal-container z-40 w-full h-full">
     <article class="modal-content">
-      <figure class="px-20 py-14 modal-bg relative aspect-video size w-[900px] h-[500px]">
-        <button class="modal-close-button absolute top-6 right-10" @click="$emit('close-modal')">Cerrar</button>
+      <figure class="px-20 py-8 modal-bg relative aspect-video size w-[900px] h-[500px] flex flex-col justify-between">
+        <button class="modal-close-button self-end top-6 right-10" @click="$emit('close-modal')">Cerrar</button>
         <slot name="itemFound"></slot>
         <slot name="itemList"></slot>
+        <slot name="footer"></slot>
       </figure>
     </article>
     <div class="modal-overlay"></div>
