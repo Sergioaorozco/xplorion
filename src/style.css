@@ -5,12 +5,12 @@
 /* Custom Styles */
 @font-face {
   font-family: 'BatonGreekBold';
-  src: url("src/assets/fonts/BatonGreekBeta-Bold.otf");
+  src: url("/fonts/BatonGreekBeta-Bold.otf");
 }
 
 @font-face {
   font-family: 'Basis_Grotesque';
-  src: url("src/assets/fonts/basis-grotesque-medium-pro.woff2");
+  src: url("/fonts/basis-grotesque-medium-pro.woff2");
 }
 
 .title-fontface { font-family: "BatonGreekBold", sans-serif; }
@@ -48,8 +48,7 @@
 .modal-container { 
   @apply fixed top-0 left-0;
   .modal-content {
-    font-family: "BatonGreekBold", sans-serif;
-    @apply flex justify-center items-center z-50 relative h-full w-full;
+    @apply flex justify-center items-center z-50 relative h-full w-full title-fontface;
   }
   .modal-overlay{
     @apply absolute top-0 left-0 w-full h-full bg-black bg-opacity-50;

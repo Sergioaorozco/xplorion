@@ -26,7 +26,7 @@
   <!-- Map Illustration -->
   <Map>
     <Bird :x-position="1500" :y-position="1100" id="item003" type="item" @check-item="openModalContent" />
-    <Place :x-position="2500" :y-position="2100" id="item002" type="place" @check-item="openModalContent" />
+    <Place :x-position="2500" :y-position="2100" id="item002" type="item" @check-item="openModalContent" />
   </Map>
 </template>
 
