@@ -23,9 +23,9 @@ const props = defineProps({
 const testAnimal = () => {
   emit('check-item', {
     type: props.type,
-    title: 'FireBird of Utah',
+    title: 'Lion of Kokkalis',
     id: props.id,
-    WKey: 'You have discovered a Bird',
+    WKey: 'You have discovered an Animal',
     description: "During the Second World War, the republican army built a cave in Mount Vrontero to make it a hospital for the wounded. It got it's name from doctor Petros Kokkalis.",
   });
 }

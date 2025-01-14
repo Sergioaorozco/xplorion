@@ -11,7 +11,7 @@
       <span class="w-2/5">
         <h1 v-if="ModalContent.WKey" class="text-lg font-bold text-lime-700 tracking-wide uppercase">{{ ModalContent.WKey }}</h1>
         <h2 class="text-5xl my-4">{{ModalContent.title}}</h2>
-        <p class="text-pretty basis-text"> {{ ModalContent.description }}</p>
+        <p class="text-pretty basis-text font-light text-lg"> {{ ModalContent.description }}</p>
       </span>
       <figure class="relative w-3/5 flex justify-center items-center h-full">
         <img class="absolute" width="400" src="/images/card-back.svg" alt="">
