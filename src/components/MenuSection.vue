@@ -44,6 +44,8 @@ const props = defineProps({
   isVisible: ({ type: Boolean, default: false })
 })
 
+const emit = defineEmits(['checkModal'])
+
 // Components and Stores
 import MissionListModal from '../components/MissionModal.vue';
 const gameStore = useGameStore();
