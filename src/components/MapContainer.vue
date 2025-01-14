@@ -27,7 +27,7 @@
   </template>
   </MissionModal>
   <!-- Menu Section -->
-  <MenuSection :is-visible="showItemListModal" />
+  <MenuSection :is-visible="showItemListModal" @check-modal="checkVisibility" />
   <!-- Map Illustration -->
   <Map>
     <Bird :x-position="1500" :y-position="1100" id="bird_item" type="item" @check-item="openModalContent" />
@@ -78,6 +78,10 @@
     const isFound = gameStore.userFindObjects.find(item => item.id === content.id && item.type === content.type);
     if (isFound) isFound.found = true;
   };
+
+  const checkVisibility = (modalValue:boolean) => {
+    showItemListModal.value = modalValue
+  }
 
   const goToList = () => {
     closeModal();
