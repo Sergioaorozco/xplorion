@@ -1,0 +1,8 @@
+:root {
+  --grab-cursor : url("/images/cursors/grab.png"), auto;
+  --pointer-cursor: url("/images/cursors/pointer.png"), auto;
+  --watch-cursor: url('/images/cursors/wtach.png'), auto;
+  --default-cursor: url("/images/cursors/default.png"), auto;
+  --hand-cursor: url("/images/cursors/default.png"), auto;
+  --default-cursor: url("/images/cursors/default.png"), auto;
+}

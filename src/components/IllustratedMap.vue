@@ -63,12 +63,3 @@ onMounted(() => {
 
 </script>
 
-<style scoped>
-.map {
-  cursor: url(/images/items/cursors/hand.png), auto;
-}
-.map:active {
-  cursor: url(/images/items/cursors/drag.png), auto;
-
-}
-</style>

@@ -43,7 +43,3 @@ const testAnimal = () => {
   </article>
 </template>
 
-
-<style scoped>
-.map-item:hover { cursor: url('/images/items/cursors/watch.png'), auto; }
-</style>

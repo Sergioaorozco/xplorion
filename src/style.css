@@ -13,6 +13,15 @@
   src: url("/fonts/basis-grotesque-medium-pro.woff2");
 }
 
+:root {
+  --grab-cursor : url("/images/cursors/grab.png"), auto;
+  --pointer-cursor: url("/images/cursors/pointer.png"), auto;
+  --watch-cursor: url('/images/cursors/watch.png'), auto;
+  --hand-cursor: url("/images/cursors/hand.png"), auto;
+  --drag-cursor: url("/images/cursors/drag.png"), auto;
+  --default-cursor: url("/images/cursors/default.png"), auto;
+}
+
 .title-fontface { font-family: "BatonGreekBold", sans-serif; }
 .content-fontface { font-family: "Basis_Grotesque", sans-serif; }
 .custom-hover-pointer:hover { cursor: url("/images/cursors/pointer.png");}
@@ -24,7 +33,7 @@
   position: relative;
   width: 100vw;
   .map {
-    cursor: grab;
+    cursor: var(--hand-cursor);
     height: 170vw;
     left: 0;
     position: absolute;
@@ -32,6 +41,7 @@
     touch-action: none;
     user-select: none;
     width: 300vw;
+    &:active { cursor: var(--drag-cursor);}
     .map_image {
       bottom: 0;
       left: 0;
@@ -39,6 +49,7 @@
       right: 0;
       top: 0;
     }
+    .map-item:hover { cursor: var(--watch-cursor); }
   }
 }
 

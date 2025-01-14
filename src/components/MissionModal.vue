@@ -15,12 +15,13 @@
 
 
 <style scoped>
-@import '../animations.css';
+@import '../styles/animations.css';
+@import '../styles/cursors.css';
 
 .modal-container {
-  cursor: url('/images/cursors/default.png'), auto;
+  cursor: var(--default-cursor);
 }
-.modal-close-button:hover { cursor: url('/images/cursors/pointer.png'), auto; }
+.modal-close-button:hover { cursor: var(--pointer-cursor);  }
 .modal-bg {
   background-image: url('/images/modal-bg-small-front.png');
   background-size: cover;
