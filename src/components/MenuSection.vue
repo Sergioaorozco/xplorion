@@ -3,9 +3,9 @@
     <template v-slot:itemList>
       <div>
         <h2 class="text-5xl text-center">List of Items</h2>
-        <ul class="grid grid-cols-3 gap-2 mt-8">
+        <ul class="grid grid-cols-3 gap-2 mt-8 place-self-center">
           <li v-for="item in gameStore.userFindObjects"
-            :class="['text-center h-32 flex justify-center items-center', !item.found && 'grayscale']">
+            :class="['text-center size-36 flex justify-center items-center bg-stone-100 p-6 border-8 border-stone-300', !item.found && 'grayscale']">
             <img width="100" height="50" :src="item.img" alt="">
           </li>
         </ul>

@@ -1,13 +1,9 @@
 import { defineStore } from "pinia";
 import { ref, computed } from "vue";
+import { sourceAnimal } from '../assets/items/animals';
 
 export const useGameStore = defineStore('gameAdvance', () => {
-  const userFindObjects = ref([
-    {name:'bird', img:'/images/items/Bird.svg',id:'bird_item', found: false, type:'item'},
-    {name:'mono', img:'images/items/Mono.svg',id:'mono_item', found: false, type:'item'},
-    {name:'frog', img:'/images/items/Frog.svg',id:'frog_item', found: false, type:'item'},
-    {name:'lion', img:'/images/items/Lion.svg',id:'lion_item', found: false, type:'item'},
-  ])
+  const userFindObjects = ref(sourceAnimal)
 
   const completionNotification = computed(() => {
     return userFindObjects.value.every((item) => item.found);
@@ -19,5 +15,12 @@ export const useGameStore = defineStore('gameAdvance', () => {
     return `${foundItems} / ${totalItems}`;
   })
 
-  return { userFindObjects, completionNotification, countItems }
+  //Methods
+
+  const getItemById = (requestedId:string) => {
+    const itemToRender = userFindObjects.value.find(item => item.id == requestedId);
+    return itemToRender ?? false
+  }
+
+  return { userFindObjects, completionNotification, countItems, getItemById }
 })
