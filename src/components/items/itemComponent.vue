@@ -39,7 +39,7 @@ const isItemFound = () => {
   <article
     @click="isItemFound"
     class="map-item-container absolute z-10"
-    :style = "{ top: yPosition + 'px', left: xPosition + 'px' }"
+    :style = "{ top: yPosition + '%', left: xPosition + '%' }"
   >
     <figure class="map-item">
       <img class="" :src="itemInfo.img" :alt="`${itemInfo.title} image found in the map`" />

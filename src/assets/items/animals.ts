@@ -7,8 +7,8 @@ export const sourceAnimal = [
     "wKey": "You have discovered the Andean Bear",
     "found": false,
     "img": "/images/items/Bird.svg",
-    "xPosition": 5200,
-    "yPosition": 1200
+    "xPosition": 45,
+    "yPosition": 87
   },
   {
     "id": "harpy-eagle",
@@ -18,8 +18,8 @@ export const sourceAnimal = [
     "wKey": "You have discovered the Harpy Eagle",
     "found": false,
     "img": "/images/items/Mono.svg",
-    "xPosition": 4500,
-    "yPosition": 2100
+    "xPosition": 32,
+    "yPosition": 76
   },
   {
     "id": "cotton-top-tamarin",
@@ -29,8 +29,8 @@ export const sourceAnimal = [
     "wKey": "You have discovered the Cotton-top Tamarin",
     "found": false,
     "img": "/images/items/Frog.svg",
-    "xPosition": 3100,
-    "yPosition": 2200
+    "xPosition": 19,
+    "yPosition": 63
   },
   {
     "id": "pink-river-dolphin",
@@ -40,8 +40,8 @@ export const sourceAnimal = [
     "wKey": "You have discovered the Pink River Dolphin",
     "found": false,
     "img": "/images/items/Lion.svg",
-    "xPosition": 200,
-    "yPosition": 150
+    "xPosition": 81,
+    "yPosition": 24
   },
   {
     "id": "jaguar",
@@ -51,8 +51,8 @@ export const sourceAnimal = [
     "wKey": "You have discovered the Jaguar",
     "found": false,
     "img": "/images/items/Bird.svg",
-    "xPosition": 1600,
-    "yPosition": 1350
+    "xPosition": 55,
+    "yPosition": 91
   },
   {
     "id": "blue-billed-curassow",
@@ -62,7 +62,7 @@ export const sourceAnimal = [
     "wKey": "You have discovered the Blue-billed Curassow",
     "found": false,
     "img": "/images/items/Mono.svg",
-    "xPosition": 2400,
-    "yPosition": 1500
+    "xPosition": 72,
+    "yPosition": 37
   }
 ];
