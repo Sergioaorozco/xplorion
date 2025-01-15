@@ -52,10 +52,21 @@ export const sourceAnimal = [
     "found": false,
     "img": "/images/items/Bird.svg",
     "xPosition": 55,
-    "yPosition": 91
+    "yPosition": 85
   },
   {
     "id": "blue-billed-curassow",
+    "type": "animal",
+    "title": "Blue-billed Curassow",
+    "description": "This large bird is native to Colombia's forests and is critically endangered due to habitat loss and hunting.",
+    "wKey": "You have discovered the Blue-billed Curassow",
+    "found": false,
+    "img": "/images/items/Mono.svg",
+    "xPosition": 72,
+    "yPosition": 37
+  },
+  {
+    "id": "blue-billed-curassow2",
     "type": "animal",
     "title": "Blue-billed Curassow",
     "description": "This large bird is native to Colombia's forests and is critically endangered due to habitat loss and hunting.",
