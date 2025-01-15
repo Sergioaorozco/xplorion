@@ -22,7 +22,7 @@
   <template #footer>
     <div class="self-start flex gap-x-3">
       <p class="bg-white rounded-lg px-3 py-1 w-fit">{{  gameStore.countItems }}</p>
-      <button class="bg-white rounded-lg px-3 py-1" @click="goToList">See the List</button>
+      <button class="bg-white rounded-lg px-3 py-1 hover:bg-stone-400 transition-colors duration-200" @click="goToList">See the List</button>
     </div>
   </template>
   </MissionModal>

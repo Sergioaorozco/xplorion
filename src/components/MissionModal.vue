@@ -1,8 +1,10 @@
 <template>
   <section class="modal-container z-40 w-full h-full">
     <article class="modal-content">
-      <figure class="px-20 py-8 modal-bg relative aspect-video size w-[900px] h-[500px] flex flex-col justify-between">
-        <button class="modal-close-button self-end top-6 right-10" @click="$emit('close-modal')">Cerrar</button>
+      <figure class="px-16 py-8 modal-bg relative aspect-video size w-[900px] h-[500px] flex flex-col justify-between">
+        <button class="modal-close-button self-end size-10 text-stone-500 hover:text-stone-800 transition-colors duration-200" @click="$emit('close-modal')">
+          <IconSquareRoundedXFilled  class="size-full" />
+        </button>
         <slot name="itemFound"></slot>
         <slot name="itemList"></slot>
         <slot name="footer"></slot>
@@ -12,6 +14,9 @@
   </section>
   
 </template>
+<script setup lang="ts">
+import { IconSquareRoundedXFilled } from '@tabler/icons-vue';
+</script>
 
 
 <style scoped>
