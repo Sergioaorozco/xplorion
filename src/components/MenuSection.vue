@@ -37,11 +37,11 @@
       <ul class="flex items-center gap-x-5">
         <li @click="$emit('checkModal', {type:'animal', value:true})"
           :class="['size-24 p-3 border-white border-8 flex justify-center items-center', isAnimalsCompleted ? 'bg-lime-300 text-lime-500 hover:text-lime-700 hover:bg-lime-400' : 'bg-stone-300 text-stone-500 hover:text-stone-700 hover:bg-stone-200']">
-          <IconAccessible  class="size-full" />
+          <IconPawFilled   class="size-full" />
         </li>
         <li @click="$emit('checkModal', {type:'place', value:true})"
           :class="['size-24 p-3 border-white border-8 flex justify-center items-center', isPlacesCompleted ? 'bg-lime-300 text-lime-500 hover:text-lime-700 hover:bg-lime-400' : 'bg-stone-300 text-stone-500 hover:text-stone-700 hover:bg-stone-200']">
-          <IconBuildingPavilion   class="size-full" />
+          <IconMapPinFilled   class="size-full" />
         </li>
       </ul>
       <div class="flex gap-x-5">
@@ -55,7 +55,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { useGameStore } from '../stores/GameStore';
-import { IconAccessible, IconBuildingPavilion } from '@tabler/icons-vue';
+import { IconPawFilled , IconMapPinFilled } from '@tabler/icons-vue';
 
 const TYPES = { ANIMAL: 'animal', PLACE: 'place' }
 
