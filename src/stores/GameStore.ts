@@ -4,6 +4,9 @@ import { sourceAnimal } from '../assets/items/animals';
 import { sourcePlaces } from '../assets/items/places';
 
 export const useGameStore = defineStore('gameAdvance', () => {
+  // defining Types
+  const TYPES = {ANIMAL:'animal', PLACE:'place'}
+
   const userFindAnimals = ref(sourceAnimal);
   const userFindPlaces = ref(sourcePlaces);
 
@@ -36,6 +39,29 @@ export const useGameStore = defineStore('gameAdvance', () => {
     return itemToRender ?? false
   }
 
+  const getContentByType = (requestedType:string) => {
+    // Method to fill the content modal
+    switch(requestedType) {
+      case TYPES.ANIMAL:
+        return {
+          info: userFindAnimals.value,
+          count: countAnimals.value,
+          title: 'List of Animals',
+          defaultImage: "this.src='/images/items/Bird.svg'"
+        }
+      case TYPES.PLACE:
+        return {
+          info: userFindPlaces.value,
+          count: countPlaces.value,
+          title: 'List of Places',
+          defaultImage: "this.src='/images/items/Lion.svg'"
+        }
+      default:
+        alert(`Invalid type: ${requestedType}`);
+        return { info: [], count: '', title: '', defaultImage: ''};
+    }
+  }
+
   return {
     userFindAnimals,
     userFindPlaces,
@@ -43,6 +69,7 @@ export const useGameStore = defineStore('gameAdvance', () => {
     isPlacesCompleted,
     countAnimals,
     countPlaces,
-    getItemById
+    getItemById,
+    getContentByType,
   }
 })

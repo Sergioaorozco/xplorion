@@ -2,17 +2,17 @@
   <MissionListModal v-if="props.isVisible" @close-modal="$emit('toggleModal', {modalType:props.type, modalValue: false})">
     <template v-slot:itemList>
       <div>
-        <h2 class="text-5xl text-center">{{ getContentbyType.title }}</h2>
+        <h2 class="text-5xl text-center">{{ modalContent.title }}</h2>
         <ul class="flex justify-center flex-wrap px-14 gap-2 mt-8">
-          <li v-for="item in getContentbyType.info"
+          <li v-for="item in modalContent.info"
             :class="['text-center size-36 flex rounded-md justify-center items-center bg-stone-50/50 p-6 border-4 border-stone-300 hover:-translate-y-1 transition-transform duration-200', !item.found && 'grayscale']">
-            <img :onerror="getContentbyType.defaultImage" width="100" height="50" :src="item.img" :alt="`${item.title} image in the map`">
+            <img :onerror="modalContent.defaultImage" width="100" height="50" :src="item.img" :alt="`${item.title} image in the map`">
           </li>
         </ul>
       </div>
     </template>
     <template #footer>
-      <p class="bg-white rounded-lg px-3 py-1 w-fit">{{ getContentbyType.count }}</p>
+      <p class="bg-white rounded-lg px-3 py-1 w-fit">{{ modalContent.count }}</p>
     </template>
   </MissionListModal>
   <section>
@@ -65,11 +65,5 @@ const gameStore = useGameStore();
 // Computed Properties
 let isAnimalsCompleted = computed(() => gameStore.isAnimalsCompleted);
 let isPlacesCompleted = computed(() => gameStore.isPlacesCompleted);
-let getContentbyType = computed(() => ({
-  info: props.type === TYPES.ANIMAL ? gameStore.userFindAnimals : gameStore.userFindPlaces,
-  count: props.type === TYPES.PLACE ? gameStore.countAnimals : gameStore.countPlaces,
-  title: props.type === TYPES.ANIMAL ? 'List of Animals' : 'List of Places',
-  defaultImage: props.type === TYPES.ANIMAL ? "this.src='/images/items/Bird.svg'" : "this.src='/images/items/Lion.svg'"
-}))
-
+let modalContent = computed(() => gameStore.getContentByType(props.type));
 </script>
