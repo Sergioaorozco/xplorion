@@ -62,8 +62,8 @@ export const sourceAnimal = [
     "wKey": "You have discovered the Blue-billed Curassow",
     "found": false,
     "img": "/images/items/Mono.svg",
-    "xPosition": 72,
-    "yPosition": 37
+    "xPosition": 82,
+    "yPosition": 17
   },
   {
     "id": "blue-billed-curassow2",
@@ -73,7 +73,7 @@ export const sourceAnimal = [
     "wKey": "You have discovered the Blue-billed Curassow",
     "found": false,
     "img": "/images/items/Mono.svg",
-    "xPosition": 72,
-    "yPosition": 37
+    "xPosition": 32,
+    "yPosition": 77
   }
 ];
