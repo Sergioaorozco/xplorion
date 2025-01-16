@@ -36,11 +36,11 @@
       <p class="title-fontface text-4xl custom-hover-pointer">Xplorion</p>
       <ul class="flex items-center gap-x-5">
         <li @click="$emit('checkModal', {type:'animal', value:true})"
-          :class="['size-24 p-3 border-white border-8 flex justify-center items-center', isCompleted ? 'bg-lime-300 text-lime-500 hover:text-lime-700 hover:bg-lime-400' : 'bg-stone-300 text-stone-500 hover:text-stone-700 hover:bg-stone-200']">
+          :class="['size-24 p-3 border-white border-8 flex justify-center items-center', isAnimalsCompleted ? 'bg-lime-300 text-lime-500 hover:text-lime-700 hover:bg-lime-400' : 'bg-stone-300 text-stone-500 hover:text-stone-700 hover:bg-stone-200']">
           <IconAccessible  class="size-full" />
         </li>
         <li @click="$emit('checkModal', {type:'place', value:true})"
-          :class="['size-24 p-3 border-white border-8 flex justify-center items-center', isCompleted ? 'bg-lime-300 text-lime-500 hover:text-lime-700 hover:bg-lime-400' : 'bg-stone-300 text-stone-500 hover:text-stone-700 hover:bg-stone-200']">
+          :class="['size-24 p-3 border-white border-8 flex justify-center items-center', isPlacesCompleted ? 'bg-lime-300 text-lime-500 hover:text-lime-700 hover:bg-lime-400' : 'bg-stone-300 text-stone-500 hover:text-stone-700 hover:bg-stone-200']">
           <IconBuildingPavilion   class="size-full" />
         </li>
       </ul>
@@ -71,7 +71,7 @@ import MissionListModal from '../components/MissionModal.vue';
 const gameStore = useGameStore();
 
 // Computed Properties
-let isCompleted = computed(() => gameStore.isAnimalsCompleted);
-
+let isAnimalsCompleted = computed(() => gameStore.isAnimalsCompleted);
+let isPlacesCompleted = computed(() => gameStore.isPlacesCompleted);
 
 </script>
