@@ -1,79 +1,79 @@
 export const sourceAnimal = [
   {
-    "id": "andean-bear",
+    "id": "howler-monkey",
     "type": "animal",
-    "title": "Andean Bear",
-    "description": "Also known as the spectacled bear, it is the only bear species native to South America. Its population is declining due to habitat loss and hunting.",
-    "wKey": "You have discovered the Andean Bear",
+    "title": "Howler Monkey",
+    "description": "Known for their loud calls, these primates are a common sight in the Tayrona forests, playing a key role in the ecosystem.",
+    "wKey": "You have discovered the Howler Monkey",
     "found": false,
-    "img": "/images/items/Bird.svg",
+    "img": "/images/animals/howler-monkey.svg",
     "xPosition": 45,
-    "yPosition": 87
+    "yPosition": 70
   },
   {
-    "id": "harpy-eagle",
+    "id": "agouti",
     "type": "animal",
-    "title": "Harpy Eagle",
-    "description": "One of the largest and most powerful raptors in the world, the Harpy Eagle is critically endangered in Colombia due to deforestation.",
-    "wKey": "You have discovered the Harpy Eagle",
+    "title": "Agouti",
+    "description": "These small, rodent-like mammals are crucial seed dispersers in Tayrona's ecosystem.",
+    "wKey": "You have discovered the Agouti",
     "found": false,
-    "img": "/images/items/Mono.svg",
-    "xPosition": 32,
-    "yPosition": 76
+    "img": "/images/animals/agouti.svg",
+    "xPosition": 38,
+    "yPosition": 62
   },
   {
-    "id": "cotton-top-tamarin",
+    "id": "ocelot",
     "type": "animal",
-    "title": "Cotton-top Tamarin",
-    "description": "A small, charismatic primate found only in Colombia, its population is critically endangered due to deforestation and pet trade.",
-    "wKey": "You have discovered the Cotton-top Tamarin",
+    "title": "Ocelot",
+    "description": "A beautiful and elusive wild cat, the ocelot inhabits Tayrona's dense forests.",
+    "wKey": "You have discovered the Ocelot",
     "found": false,
-    "img": "/images/items/Frog.svg",
-    "xPosition": 19,
-    "yPosition": 63
+    "img": "/images/animals/ocelot.svg",
+    "xPosition": 50,
+    "yPosition": 75
   },
   {
-    "id": "pink-river-dolphin",
+    "id": "poison-dart-frog",
     "type": "animal",
-    "title": "Pink River Dolphin",
-    "description": "A unique species of freshwater dolphin, it inhabits the Amazon and Orinoco rivers but is threatened by pollution and habitat degradation.",
-    "wKey": "You have discovered the Pink River Dolphin",
+    "title": "Poison Dart Frog",
+    "description": "These vibrant amphibians are as striking as they are toxic, thriving in Tayrona's humid environment.",
+    "wKey": "You have discovered the Poison Dart Frog",
     "found": false,
-    "img": "/images/items/Lion.svg",
-    "xPosition": 81,
-    "yPosition": 24
+    "img": "/images/animals/poison-dart-frog.svg",
+    "xPosition": 60,
+    "yPosition": 50
   },
   {
-    "id": "jaguar",
+    "id": "scarlet-macaw",
     "type": "animal",
-    "title": "Jaguar",
-    "description": "This majestic big cat is the largest predator in South America and is facing threats from habitat loss and illegal hunting.",
-    "wKey": "You have discovered the Jaguar",
+    "title": "Scarlet Macaw",
+    "description": "This colorful parrot is a symbol of Tayrona's biodiversity, known for its striking plumage and intelligence.",
+    "wKey": "You have discovered the Scarlet Macaw",
     "found": false,
-    "img": "/images/items/Bird.svg",
-    "xPosition": 55,
-    "yPosition": 85
+    "img": "/images/animals/scarlet-macaw.svg",
+    "xPosition": 70,
+    "yPosition": 40
   },
   {
-    "id": "blue-billed-curassow",
+    "id": "tayrona-black-hawk",
     "type": "animal",
-    "title": "Blue-billed Curassow",
-    "description": "This large bird is native to Colombia's forests and is critically endangered due to habitat loss and hunting.",
-    "wKey": "You have discovered the Blue-billed Curassow",
+    "title": "Tayrona Black Hawk",
+    "description": "This raptor soars above Tayrona's forests, hunting small mammals and reptiles.",
+    "wKey": "You have discovered the Tayrona Black Hawk",
     "found": false,
-    "img": "/images/items/Mono.svg",
-    "xPosition": 82,
-    "yPosition": 17
+    "img": "/images/animals/tayrona-black-hawk.svg",
+    "xPosition": 30,
+    "yPosition": 55
   },
   {
-    "id": "blue-billed-curassow2",
+    "id": "boa-constrictor",
     "type": "animal",
-    "title": "Blue-billed Curassow",
-    "description": "This large bird is native to Colombia's forests and is critically endangered due to habitat loss and hunting.",
-    "wKey": "You have discovered the Blue-billed Curassow",
+    "title": "Boa Constrictor",
+    "description": "A large, non-venomous snake that plays a crucial role in controlling populations of small mammals and birds in Tayrona.",
+    "wKey": "You have discovered the Boa Constrictor",
     "found": false,
-    "img": "/images/items/Mono.svg",
-    "xPosition": 32,
-    "yPosition": 77
+    "img": "/images/animals/boa-constrictor.svg",
+    "xPosition": 40,
+    "yPosition": 65
   }
 ];

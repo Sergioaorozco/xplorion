@@ -1,26 +1,48 @@
 import { defineStore } from "pinia";
 import { ref, computed } from "vue";
 import { sourceAnimal } from '../assets/items/animals';
+import { sourcePlaces } from '../assets/items/places';
 
 export const useGameStore = defineStore('gameAdvance', () => {
-  const userFindObjects = ref(sourceAnimal)
+  const userFindAnimals = ref(sourceAnimal);
+  const userFindPlaces = ref(sourcePlaces);
 
-  const completionNotification = computed(() => {
-    return userFindObjects.value.every((item) => item.found);
+  // Computed Properties
+  const isAnimalsCompleted = computed(() => {
+    return userFindAnimals.value.every((item) => item.found);
   })
 
-  const countItems = computed(() => {
-    let totalItems = userFindObjects.value.length;
-    let foundItems = userFindObjects.value.filter((item) => item.found).length;
-    return `${foundItems} / ${totalItems}`;
+  const isPlacesCompleted = computed(() => {
+    return userFindPlaces.value.every((item) => item.found);
+  })
+
+  const countAnimals = computed(() => {
+    let totalAnimals = userFindAnimals.value.length;
+    let foundPlaces = userFindAnimals.value.filter((item) => item.found).length;
+    return `${foundPlaces} / ${totalAnimals}`;
+  })
+
+  const countPlaces = computed(() => {
+    let totalPlaces = userFindPlaces.value.length;
+    let foundPlaces = userFindPlaces.value.filter((item) => item.found).length;
+    return `${foundPlaces} / ${totalPlaces}`;
   })
 
   //Methods
 
   const getItemById = (requestedId:string) => {
-    const itemToRender = userFindObjects.value.find(item => item.id == requestedId);
+    const totalItems = [...userFindPlaces.value,...userFindAnimals.value]
+    const itemToRender = totalItems.find(item => item.id == requestedId);
     return itemToRender ?? false
   }
 
-  return { userFindObjects, completionNotification, countItems, getItemById }
+  return {
+    userFindAnimals,
+    userFindPlaces,
+    isAnimalsCompleted,
+    isPlacesCompleted,
+    countAnimals,
+    countPlaces,
+    getItemById
+  }
 })

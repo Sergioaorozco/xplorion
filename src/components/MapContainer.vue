@@ -21,8 +21,8 @@
   </template>
   <template #footer>
     <div class="self-start flex gap-x-3">
-      <p class="bg-white rounded-lg px-3 py-1 w-fit">{{  gameStore.countItems }}</p>
-      <button class="bg-white rounded-lg px-3 py-1 hover:bg-stone-400 transition-colors duration-200" @click="goToList">See the List</button>
+      <p class="bg-white rounded-lg px-3 py-1 w-fit">{{  ModalContent.type === TYPES.ANIMAL ? gameStore.countAnimals : gameStore.countPlaces }}</p>
+      <button class="bg-white rounded-lg px-3 py-1 hover:bg-stone-400 transition-colors duration-200" @click="() => goToList(ModalContent.type)">See the List</button>
     </div>
   </template>
   </MissionModal>
@@ -30,7 +30,8 @@
   <MenuSection :is-visible="showItemListModal" @check-modal="checkVisibility" />
   <!-- Map Illustration -->
   <Map>
-    <Item v-for="item in gameStore.userFindObjects" :x-position="item.xPosition" :y-position="item.yPosition" :id="item.id" @check-item="openModalContent" />
+    <Item v-for="animal in gameStore.userFindAnimals" :x-position="animal.xPosition" :y-position="animal.yPosition" :id="animal.id" @check-item="openModalContent" />
+    <Item v-for="place in gameStore.userFindPlaces" :x-position="place.xPosition" :y-position="place.yPosition" :id="place.id" @check-item="openModalContent" />
   </Map>
 </template>
 
@@ -50,12 +51,14 @@
   import { ref } from 'vue';
   import Map from '../components/IllustratedMap.vue';
 
+  const TYPES = { ANIMAL: 'animal', PLACE: 'place' }
+
   const gameStore = useGameStore();
 
   // Rective References
   let showModal = ref(false);
   let ModalContent = ref({} as ModalInterface);
-  let showItemListModal = ref(false);
+  let showItemListModal = ref({});
 
   // Methods
   const closeModal = () => {
@@ -74,9 +77,12 @@
     showItemListModal.value = modalValue
   }
 
-  const goToList = () => {
+  const goToList = (typeModal: string) => {
     closeModal();
-    showItemListModal.value = true;
+    showItemListModal.value = {
+      type: typeModal,
+      value: true
+    };
   }
 
 </script>
