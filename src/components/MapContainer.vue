@@ -1,30 +1,26 @@
 <template>
   <MissionModal
-    :title="ModalContent.title"
-    :wKey="ModalContent.wKey"
-    :description="ModalContent.description"
     @close-modal="closeModal"
-    v-if="showModal" 
-  >
-  <template #itemFound>
-    <div class="flex gap-x-10 justify-between h-full">
-      <span class="w-2/5">
-        <h1 v-if="ModalContent.wKey" class="text-lg font-bold text-lime-700 tracking-wide uppercase">{{ ModalContent.wKey }}</h1>
-        <h2 class="text-5xl my-4">{{ModalContent.title}}</h2>
-        <p class="text-pretty basis-text font-light text-lg"> {{ ModalContent.description }}</p>
-      </span>
-      <figure class="relative w-3/5 flex justify-center items-center h-full">
-        <img class="absolute" width="400" src="/images/card-back.svg" alt="">
-        <img class="absolute" width="400" src="/images/cave-of-kokkalis.webp" alt="">
-      </figure>
-    </div>
-  </template>
-  <template #footer>
-    <div class="self-start flex gap-x-3">
-      <p class="bg-white rounded-lg px-3 py-1 w-fit">{{  ModalContent.type === TYPES.ANIMAL ? gameStore.countAnimals : gameStore.countPlaces }}</p>
-      <button class="bg-white rounded-lg px-3 py-1 hover:bg-stone-400 transition-colors duration-200" @click="() => goToList(ModalContent.type)">See the List</button>
-    </div>
-  </template>
+    v-if="showModal">
+    <template #itemFound>
+      <div class="flex gap-x-10 justify-between h-full">
+        <span class="w-2/5">
+          <h1 class="text-lg font-bold text-lime-700 tracking-wide uppercase">{{ ModalContent.wKey }}</h1>
+          <h2 class="text-5xl my-4">{{ModalContent.title}}</h2>
+          <p class="text-pretty basis-text font-light text-lg"> {{ ModalContent.description }}</p>
+        </span>
+        <figure class="relative w-3/5 flex justify-center items-center h-full">
+          <img class="absolute" width="400" src="/images/card-back.svg" alt="">
+          <img class="absolute" width="400" src="/images/cave-of-kokkalis.webp" alt="">
+        </figure>
+      </div>
+    </template>
+    <template #footer>
+      <div class="self-start flex gap-x-3">
+        <p class="bg-white rounded-lg px-3 py-1 w-fit">{{  ModalContent.type === TYPES.ANIMAL ? gameStore.countAnimals : gameStore.countPlaces }}</p>
+        <button class="bg-white rounded-lg px-3 py-1 hover:bg-stone-400 transition-colors duration-200" @click="() => goToList(ModalContent.type)">See the List</button>
+      </div>
+    </template>
   </MissionModal>
   <!-- Menu Section -->
   <MenuSection :is-visible="showItemListModal" @check-modal="checkVisibility" />
