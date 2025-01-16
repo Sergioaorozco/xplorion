@@ -7,7 +7,7 @@ export const sourcePlaces = [
     "wKey": "You have discovered a place",
     "found": false,
     "img": "/images/places/cabo-san-juan.svg",
-    "xPosition": 45,
+    "xPosition": 90,
     "yPosition": 67
   },
   {
@@ -51,7 +51,7 @@ export const sourcePlaces = [
     "wKey": "You have discovered a place",
     "found": false,
     "img": "/images/places/playa-cristal.svg",
-    "xPosition": 75,
+    "xPosition": 15,
     "yPosition": 36
   },
   {
@@ -62,7 +62,7 @@ export const sourcePlaces = [
     "wKey": "You have discovered a place",
     "found": false,
     "img": "/images/places/el-zaino.svg",
-    "xPosition": 50,
+    "xPosition": 30,
     "yPosition": 28
   },
   {
@@ -73,7 +73,7 @@ export const sourcePlaces = [
     "wKey": "You have discovered a place",
     "found": false,
     "img": "/images/places/cinta-sagrada.svg",
-    "xPosition": 34,
-    "yPosition": 44
+    "xPosition": 70,
+    "yPosition": 24
   }
 ];

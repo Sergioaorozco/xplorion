@@ -42,7 +42,7 @@ const isItemFound = () => {
     :style = "{ top: yPosition + '%', left: xPosition + '%' }"
   >
     <figure class="map-item">
-      <img class="" :src="itemInfo.img" :alt="`${itemInfo.title} image found in the map`" />
+      <img onerror="this.src='/images/items/Bird.svg'" :src="itemInfo.img" :alt="`${itemInfo.title} image found in the map`" />
     </figure>
   </article>
 </template>

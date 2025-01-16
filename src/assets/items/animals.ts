@@ -7,8 +7,8 @@ export const sourceAnimal = [
     "wKey": "You have discovered an animal",
     "found": false,
     "img": "/images/animals/howler-monkey.svg",
-    "xPosition": 45,
-    "yPosition": 70
+    "xPosition": 12,
+    "yPosition": 4
   },
   {
     "id": "agouti",
@@ -41,7 +41,7 @@ export const sourceAnimal = [
     "found": false,
     "img": "/images/animals/poison-dart-frog.svg",
     "xPosition": 60,
-    "yPosition": 50
+    "yPosition": 20
   },
   {
     "id": "scarlet-macaw",
@@ -51,7 +51,7 @@ export const sourceAnimal = [
     "wKey": "You have discovered an animal",
     "found": false,
     "img": "/images/animals/scarlet-macaw.svg",
-    "xPosition": 70,
+    "xPosition": 20,
     "yPosition": 40
   },
   {
@@ -62,8 +62,8 @@ export const sourceAnimal = [
     "wKey": "You have discovered an animal",
     "found": false,
     "img": "/images/animals/tayrona-black-hawk.svg",
-    "xPosition": 30,
-    "yPosition": 55
+    "xPosition": 80,
+    "yPosition": 25
   },
   {
     "id": "boa-constrictor",
@@ -73,7 +73,7 @@ export const sourceAnimal = [
     "wKey": "You have discovered an animal",
     "found": false,
     "img": "/images/animals/boa-constrictor.svg",
-    "xPosition": 40,
+    "xPosition": 70,
     "yPosition": 65
   }
 ];
