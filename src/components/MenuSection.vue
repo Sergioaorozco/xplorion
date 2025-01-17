@@ -27,6 +27,11 @@
           :class="['size-24 p-3 border-white border-8 flex justify-center items-center', isPlacesCompleted ? 'bg-lime-300 text-lime-500 hover:text-lime-700 hover:bg-lime-400' : 'bg-stone-300 text-stone-500 hover:text-stone-700 hover:bg-stone-200']">
           <IconMapPinFilled class="size-full" />
         </li>
+        <li @click="downloadCertificate"
+          v-if="canDownloadCertificate"
+          :class="['size-24 p-3 border-white border-8 flex justify-center items-center bg-stone-300 text-stone-500 hover:text-stone-700 hover:bg-stone-200']">
+          <IconFileDownload class="size-full" />
+        </li>
       </ul>
       <div class="flex gap-x-5">
         <button class="title-fontface text-4xl custom-hover-pointer">Credits</button>
@@ -39,7 +44,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { useGameStore } from '../stores/GameStore';
-import { IconPawFilled , IconMapPinFilled } from '@tabler/icons-vue';
+import { IconPawFilled , IconMapPinFilled, IconFileDownload } from '@tabler/icons-vue';
 
 const TYPES = { ANIMAL: 'animal', PLACE: 'place' }
 
@@ -66,4 +71,10 @@ const gameStore = useGameStore();
 let isAnimalsCompleted = computed(() => gameStore.isAnimalsCompleted);
 let isPlacesCompleted = computed(() => gameStore.isPlacesCompleted);
 let modalContent = computed(() => gameStore.getContentByType(props.type));
+let canDownloadCertificate = computed(() => gameStore.isAnimalsCompleted && gameStore.isPlacesCompleted);
+
+// Methods
+const downloadCertificate = () => {
+  alert('successully downloaded');
+}
 </script>
