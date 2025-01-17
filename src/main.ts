@@ -1,10 +1,11 @@
 import { createApp } from 'vue';
 import { createPinia } from 'pinia';
 import { createWebHistory, createRouter } from 'vue-router';
-import './style.css';
-
+import PrimeVue from 'primevue/config';
 import App from './App.vue';
 
+// Styles
+import './style.css';
 
 const routes = [
   {
@@ -25,6 +26,12 @@ const router = createRouter({
 })
 
 const app = createApp(App);
+
+app.use(PrimeVue, {
+  theme: {
+      darkModeSelector: '.my-app-dark',
+  }
+});
 
 app.use(createPinia());
 app.use(router);

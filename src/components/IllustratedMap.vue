@@ -5,7 +5,7 @@
       @mousedown="startPosition"
       :style="{ transform: `translate3d(${translateX}px, ${translateY}px, 0px)` }"
     >
-      <img class="map_image min-w-full min-h-full" src="/images/scenery-BG.webp" alt="" />
+      <img class="map_image min-w-full min-h-full" src="/images/scenery-BG.webp" alt="Big map to play the game" />
       <slot></slot>
   </div>
 </article>
