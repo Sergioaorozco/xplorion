@@ -1,6 +1,6 @@
 <template>
   <button
-    class="font-bold text-white w-full px-5 py-2 rounded-lg bg-orange-800 hover:bg-orange-900 transition-colors duration-300"
+    class="w-full font-bold title-font-face uppercase text-3xl text-white flex justify-center items-center rounded-lg py-3 bg-orange-800 hover:bg-orange-900 transition-colors duration-300"
     :disabled="loading">
     <!-- Show loading spinner if loading is true -->
     <template v-if="loading">
