@@ -71,5 +71,6 @@ export const useGameStore = defineStore('gameAdvance', () => {
     countPlaces,
     getItemById,
     getContentByType,
+    TYPES
   }
 })

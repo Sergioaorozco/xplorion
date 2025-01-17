@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const emit = defineEmits(['check-item']);
-import { onMounted, ref } from 'vue';
+import { onMounted, computed, ref } from 'vue';
 import { useGameStore } from '../../stores/GameStore';
 import type { ModalInterface } from '../../interfaces/ModalInterface';
 
@@ -29,6 +29,8 @@ onMounted(()=> {
   if (item) itemInfo.value = item
 })
 
+let getDeaultIMG = computed(() => itemInfo.value.type === gameStore.TYPES.ANIMAL ? "this.src='/images/items/Bird.svg'" : "this.src='/images/items/Lion.svg'")
+
 
 const isItemFound = () => {
   emit('check-item', itemInfo.value);
@@ -42,7 +44,7 @@ const isItemFound = () => {
     :style = "{ top: yPosition + '%', left: xPosition + '%' }"
   >
     <figure class="map-item">
-      <img onerror="this.src='/images/items/Bird.svg'" :src="itemInfo.img" :alt="`${itemInfo.title} image found in the map`" />
+      <img :onerror="getDeaultIMG" :src="itemInfo.img" :alt="`${itemInfo.title} image found in the map`" />
     </figure>
   </article>
 </template>
