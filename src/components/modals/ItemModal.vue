@@ -17,7 +17,7 @@ v-if="isVisible">
 </template>
 <template #footer>
   <div class="self-start flex gap-x-3">
-    <p class="bg-white rounded-lg px-3 py-1 w-fit">{{  modalInfo.type === TYPES.ANIMAL ? gameStore.countAnimals : gameStore.countPlaces }}</p>
+    <p class="bg-white rounded-lg px-3 py-1 w-fit">{{  modalInfo.type === gameStore.TYPES.ANIMAL ? gameStore.countAnimals : gameStore.countPlaces }}</p>
     <button class="bg-white rounded-lg px-3 py-1 hover:bg-stone-400 transition-colors duration-200" @click="goToList">See the List</button>
   </div>
 </template>
@@ -30,7 +30,6 @@ v-if="isVisible">
   import MissionModal from '../MissionModal.vue';
 
   const gameStore = useGameStore();
-  const TYPES = { ANIMAL: 'animal', PLACE: 'place' }
   const emit = defineEmits(['toggleModal', 'redirectList']);
 
   // Props

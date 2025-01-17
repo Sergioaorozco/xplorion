@@ -23,11 +23,11 @@
     <article class="absolute top-2 flex justify-between items-center w-full z-30 px-6">
       <p class="title-fontface text-4xl custom-hover-pointer">Xplorion</p>
       <ul class="flex items-center gap-x-5">
-        <li @click="$emit('toggleModal', {modalType:TYPES.ANIMAL, modalValue: true})"
+        <li @click="$emit('toggleModal', {modalType:gameStore.TYPES.ANIMAL, modalValue: true})"
           :class="['size-24 p-3 border-white border-8 flex justify-center items-center', isAnimalsCompleted ? 'bg-lime-300 text-lime-500 hover:text-lime-700 hover:bg-lime-400' : 'bg-stone-300 text-stone-500 hover:text-stone-700 hover:bg-stone-200']">
           <IconPawFilled class="size-full" />
         </li>
-        <li @click="$emit('toggleModal', {modalType:TYPES.PLACE, modalValue: true})"
+        <li @click="$emit('toggleModal', {modalType:gameStore.TYPES.PLACE, modalValue: true})"
           :class="['size-24 p-3 border-white border-8 flex justify-center items-center', isPlacesCompleted ? 'bg-lime-300 text-lime-500 hover:text-lime-700 hover:bg-lime-400' : 'bg-stone-300 text-stone-500 hover:text-stone-700 hover:bg-stone-200']">
           <IconMapPinFilled class="size-full" />
         </li>
@@ -50,8 +50,6 @@ import { useGameStore } from '../stores/GameStore';
 import { IconPawFilled , IconMapPinFilled, IconFileDownload } from '@tabler/icons-vue';
 import CreditsModal from './modals/CreditsModal.vue';
 import HelpModal from './modals/HelpModal.vue';
-
-const TYPES = { ANIMAL: 'animal', PLACE: 'place' }
 
 // Props
 const props = defineProps({
